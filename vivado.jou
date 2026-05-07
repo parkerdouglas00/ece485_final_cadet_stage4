@@ -1,14 +1,29 @@
 #-----------------------------------------------------------
-# Vivado v2018.2 (64-bit)
-# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
-# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue Mar 10 11:33:03 2026
-# Process ID: 17964
-# Current directory: C:/Users/george.york/Documents/ECE485_code/ece485_final_cadet_stage4
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5504 C:\Users\george.york\Documents\ECE485_code\ece485_final_cadet_stage4\ece485_final_cadet_stage4.xpr
-# Log file: C:/Users/george.york/Documents/ECE485_code/ece485_final_cadet_stage4/vivado.log
-# Journal file: C:/Users/george.york/Documents/ECE485_code/ece485_final_cadet_stage4\vivado.jou
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Wed May  6 22:45:09 2026
+# Process ID         : 3784
+# Current directory  : /home/dfec/ece485/ece485_final_cadet_stage4
+# Command line       : vivado
+# Log file           : /home/dfec/ece485/ece485_final_cadet_stage4/vivado.log
+# Journal file       : /home/dfec/ece485/ece485_final_cadet_stage4/vivado.jou
+# Running On         : jupiter
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.2 LTS
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+# CPU Frequency      : 2213.399 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 33322 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 41912 MB
+# Available Virtual  : 40836 MB
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/george.york/Documents/ECE485_code/ece485_final_cadet_stage4/ece485_final_cadet_stage4.xpr
+open_project /home/dfec/ece485/ece485_final_cadet_stage4/ece485_final_cadet_stage4.xpr
+upgrade_project -migrate_output_products
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
