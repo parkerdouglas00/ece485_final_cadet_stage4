@@ -27,3 +27,13 @@ upgrade_project -migrate_output_products
 update_compile_order -fileset sim_1
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
+close_project
+open_project /home/dfec/ece485/ece485_final_cadet_stage3/ece485_final_cadet_stage3.xpr
+update_compile_order -fileset sources_1
+file mkdir /home/dfec/ece485/ece485_final_cadet_stage3/ece485_final_cadet_stage3.srcs/sources_1/new
+close [ open /home/dfec/ece485/ece485_final_cadet_stage3/ece485_final_cadet_stage3.srcs/sources_1/new/hazard_detection_unit.vhd w ]
+add_files /home/dfec/ece485/ece485_final_cadet_stage3/ece485_final_cadet_stage3.srcs/sources_1/new/hazard_detection_unit.vhd
+update_compile_order -fileset sources_1
+close_project
+open_project /home/dfec/ece485/ece485_final_cadet_stage4/ece485_final_cadet_stage4.xpr
+update_compile_order -fileset sources_1

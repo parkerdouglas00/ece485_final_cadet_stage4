@@ -199,3 +199,216 @@ selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // am (PAResourceItoN.MainMenuM
 // HMemoryUtils.trashcanNow. Engine heap size: 2,094 MB. GUI used memory: 73 MB. Current time: 5/6/26, 10:49:13 PM MDT
 // HMemoryUtils.trashcanNow. Engine heap size: 2,094 MB. GUI used memory: 73 MB. Current time: 5/6/26, 10:49:53 PM MDT
 // HMemoryUtils.trashcanNow. Engine heap size: 2,094 MB. GUI used memory: 73 MB. Current time: 5/6/26, 10:50:33 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,094 MB. GUI used memory: 73 MB. Current time: 5/6/26, 10:51:13 PM MDT
+// Elapsed time: 209 seconds
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ah (PAResourceItoN.MainMenuMgr_FILE, File)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,094 MB. GUI used memory: 73 MB. Current time: 5/6/26, 10:51:53 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,094 MB. GUI used memory: 73 MB. Current time: 5/6/26, 10:52:33 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,094 MB. GUI used memory: 73 MB. Current time: 5/6/26, 10:53:13 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,094 MB. GUI used memory: 73 MB. Current time: 5/6/26, 10:53:53 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,094 MB. GUI used memory: 73 MB. Current time: 5/6/26, 10:54:33 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,094 MB. GUI used memory: 73 MB. Current time: 5/6/26, 10:55:13 PM MDT
+// Elapsed time: 217 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, riscv_pipeline(Behavioral) (riscv_pipeline.vhdl), pipe_reg : pipeline_registers(Behavioral) (pipeline_registers.vhdl)]", 4, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, riscv_pipeline(Behavioral) (riscv_pipeline.vhdl), pipe_reg : pipeline_registers(Behavioral) (pipeline_registers.vhdl)]", 4, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// Elapsed time: 12 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ah (PAResourceItoN.MainMenuMgr_FILE, File)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ah (PAResourceItoN.MainMenuMgr_FILE, File)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // ah (PAResourceItoN.MainMenuMgr_EDIT, Edit)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // ah (PAResourceItoN.MainMenuMgr_EDIT, Edit)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ah (PAResourceItoN.MainMenuMgr_FILE, File)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // am (PAResourceItoN.MainMenuMgr_PROJECT, Project)
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_PROJECT, "Open..."); // ap (PAResourceCommand.PACommandNames_OPEN_PROJECT, open_project_menu)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ah (PAResourceItoN.MainMenuMgr_FILE, File)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+setFileChooser("/home/dfec/ece485/ece485_final_cadet_stage3/ece485_final_cadet_stage3.xpr");
+// [Engine Memory]: 2,134 MB (+341kb) [00:10:30]
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,083 MB. GUI used memory: 73 MB. Current time: 5/6/26, 10:55:45 PM MDT
+// Opening Vivado Project: /home/dfec/ece485/ece485_final_cadet_stage3/ece485_final_cadet_stage3.xpr. Version: Vivado v2025.2 
+selectButton("OptionPane.button", "Yes", "Open Project"); // JButton (OptionPane.button)
+// Tcl Message: close_project 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project /home/dfec/ece485/ece485_final_cadet_stage3/ece485_final_cadet_stage3.xpr 
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/dfec/ece485/ece485_final_cadet_stage3/ece485_final_cadet_stage3.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/2025.2/data/ip'. 
+// Project name: ece485_final_cadet_stage3; location: /home/dfec/ece485/ece485_final_cadet_stage3; part: xc7a200tsbg484-1
+dismissDialog("Open Project"); // bk (Open Project Progress)
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,078 MB. GUI used memory: 75 MB. Current time: 5/6/26, 10:55:53 PM MDT
+// Elapsed time: 21 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, riscv_pipeline(Behavioral) (riscv_pipeline.vhdl)]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, riscv_pipeline(Behavioral) (riscv_pipeline.vhdl), pipe_reg : pipeline_registers(Behavioral) (pipeline_registers.vhdl)]", 3, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, riscv_pipeline(Behavioral) (riscv_pipeline.vhdl), pipe_reg : pipeline_registers(Behavioral) (pipeline_registers.vhdl)]", 3, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+selectButton((HResource) null, "RDIResource.FrameControlsPanel_MAXIMIZE_PlanAheadTabBaseWorkspace_JideTabbedPane"); // P.a (RDIResource.FrameControlsPanel_MAXIMIZE_PlanAheadTabBaseWorkspace_JideTabbedPane)
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // K (PAResourceOtoP.PAViews_BASE_WORKSPACE, PlanAheadTabBaseWorkspace)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,099 MB. GUI used memory: 76 MB. Current time: 5/6/26, 10:56:33 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,099 MB. GUI used memory: 76 MB. Current time: 5/6/26, 10:57:13 PM MDT
+// Elapsed time: 76 seconds
+selectCodeEditor("pipeline_registers.vhdl", 608, 243); // ae (pipeline_registers.vhdl)
+// Elapsed time: 11 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "stall_counter > 0", true); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+selectCodeEditor("pipeline_registers.vhdl", 378, 155); // ae (pipeline_registers.vhdl)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,099 MB. GUI used memory: 76 MB. Current time: 5/6/26, 10:57:53 PM MDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 151 MB (+422kb) [00:12:54]
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 02m:20s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 02m:22s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,126 MB. GUI used memory: 76 MB. Current time: 5/6/26, 10:58:33 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,126 MB. GUI used memory: 76 MB. Current time: 5/6/26, 10:59:13 PM MDT
+// Elapsed time: 101 seconds
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // S (PAResourceOtoP.PAViews_SOURCES, Sources)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, riscv_pipeline(Behavioral) (riscv_pipeline.vhdl), hazard_unit : xil_defaultlib.hazard_detection_unit]", 7, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, riscv_pipeline(Behavioral) (riscv_pipeline.vhdl), hazard_unit : xil_defaultlib.hazard_detection_unit]", 7, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,126 MB. GUI used memory: 77 MB. Current time: 5/6/26, 10:59:53 PM MDT
+// Elapsed time: 49 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, riscv_pipeline(Behavioral) (riscv_pipeline.vhdl), hazard_unit : xil_defaultlib.hazard_detection_unit]", 7, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, riscv_pipeline(Behavioral) (riscv_pipeline.vhdl), hazard_unit : xil_defaultlib.hazard_detection_unit]", 7, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, riscv_pipeline(Behavioral) (riscv_pipeline.vhdl), hazard_unit : xil_defaultlib.hazard_detection_unit]", 7, false, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // am (PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, Hierarchy Update)
+selectMenuItem(PAResourceQtoS.SrcMenu_REFRESH_HIERARCHY, "Refresh Hierarchy"); // ap (PAResourceQtoS.SrcMenu_REFRESH_HIERARCHY)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 04m:46s
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 2,145 MB. GUI used memory: 77 MB. Current time: 5/6/26, 11:00:33 PM MDT
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, riscv_pipeline(Behavioral) (riscv_pipeline.vhdl), hazard_unit : xil_defaultlib.hazard_detection_unit]", 7, false, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // am (PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, Hierarchy Update)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // am (PAResourceQtoS.SrcMenu_IP_HIERARCHY, IP Hierarchy)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ap (PAResourceCommand.PACommandNames_ADD_SOURCES, add_sources_menu)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 04m:50s
+selectButton("NEXT", "Next", "Add Sources"); // JButton (NEXT)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File", "Add Sources"); // a (PAResourceQtoS.SrcChooserPanel_CREATE_FILE)
+// Elapsed time: 14 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "hazard_detection_unit"); // ad (PAResourceAtoD.CreateSrcFileDialog_FILE_NAME)
+selectButton(RDIResource.BaseDialog_OK, "OK", "Create Source File"); // f (RDIResource.BaseDialog_OK)
+// Tcl Command: 'file mkdir /home/dfec/ece485/ece485_final_cadet_stage3/ece485_final_cadet_stage3.srcs/sources_1/new'
+dismissDialog("Create Source File"); // l (dialog5)
+// Tcl Message: file mkdir /home/dfec/ece485/ece485_final_cadet_stage3/ece485_final_cadet_stage3.srcs/sources_1/new 
+selectButton("FINISH", "Finish", "Add Sources"); // JButton (FINISH)
+// 'f' command handler elapsed time: 23 seconds
+dismissDialog("Add Sources"); // d (dialog4)
+// Tcl Message: close [ open /home/dfec/ece485/ece485_final_cadet_stage3/ece485_final_cadet_stage3.srcs/sources_1/new/hazard_detection_unit.vhd w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files /home/dfec/ece485/ece485_final_cadet_stage3/ece485_final_cadet_stage3.srcs/sources_1/new/hazard_detection_unit.vhd 
+selectButton(RDIResource.BaseDialog_OK, "OK", "Define Module"); // f (RDIResource.BaseDialog_OK)
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "Yes", "Define Module"); // JButton (OptionPane.button)
+dismissDialog("Define Module"); // o (dialog6)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 05m:18s
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 05m:20s
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,176 MB. GUI used memory: 78 MB. Current time: 5/6/26, 11:01:07 PM MDT
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, riscv_pipeline(Behavioral) (riscv_pipeline.vhdl), hazard_unit : hazard_detection_unit(Behavioral) (hazard_detection_unit.vhd)]", 7, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, riscv_pipeline(Behavioral) (riscv_pipeline.vhdl), hazard_unit : hazard_detection_unit(Behavioral) (hazard_detection_unit.vhd)]", 7, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+typeControlKey((HResource) null, "hazard_detection_unit.vhd", 'v'); // ae (hazard_detection_unit.vhd)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,226 MB. GUI used memory: 79 MB. Current time: 5/6/26, 11:01:13 PM MDT
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 05m:28s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 05m:30s
+// Elapsed time: 19 seconds
+selectCodeEditor("hazard_detection_unit.vhd", 286, 639); // ae (hazard_detection_unit.vhd)
+selectCodeEditor("hazard_detection_unit.vhd", 321, 539); // ae (hazard_detection_unit.vhd)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 05m:54s
+// [Engine Memory]: 2,254 MB (+13410kb) [00:16:29]
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 05m:56s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,254 MB. GUI used memory: 79 MB. Current time: 5/6/26, 11:01:42 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,252 MB. GUI used memory: 79 MB. Current time: 5/6/26, 11:01:54 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,252 MB. GUI used memory: 79 MB. Current time: 5/6/26, 11:02:34 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,252 MB. GUI used memory: 79 MB. Current time: 5/6/26, 11:03:14 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,252 MB. GUI used memory: 79 MB. Current time: 5/6/26, 11:03:54 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,252 MB. GUI used memory: 79 MB. Current time: 5/6/26, 11:04:34 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,252 MB. GUI used memory: 79 MB. Current time: 5/6/26, 11:05:14 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,252 MB. GUI used memory: 79 MB. Current time: 5/6/26, 11:05:54 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,252 MB. GUI used memory: 79 MB. Current time: 5/6/26, 11:06:34 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,252 MB. GUI used memory: 79 MB. Current time: 5/6/26, 11:07:14 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,252 MB. GUI used memory: 79 MB. Current time: 5/6/26, 11:07:54 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,252 MB. GUI used memory: 80 MB. Current time: 5/6/26, 11:08:34 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,252 MB. GUI used memory: 79 MB. Current time: 5/6/26, 11:09:14 PM MDT
+// Elapsed time: 465 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, riscv_pipeline(Behavioral) (riscv_pipeline.vhdl), pipe_reg : pipeline_registers(Behavioral) (pipeline_registers.vhdl)]", 3, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, riscv_pipeline(Behavioral) (riscv_pipeline.vhdl), pipe_reg : pipeline_registers(Behavioral) (pipeline_registers.vhdl)]", 3, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+selectCodeEditor("pipeline_registers.vhdl", 448, 326); // ae (pipeline_registers.vhdl)
+typeControlKey((HResource) null, "pipeline_registers.vhdl", 'c'); // ae (pipeline_registers.vhdl)
+typeControlKey((HResource) null, "pipeline_registers.vhdl", 'c'); // ae (pipeline_registers.vhdl)
+selectCodeEditor("pipeline_registers.vhdl", 448, 326); // ae (pipeline_registers.vhdl)
+// Elapsed time: 13 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ah (PAResourceItoN.MainMenuMgr_FILE, File)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // am (PAResourceItoN.MainMenuMgr_PROJECT, Project)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // am (PAResourceItoN.MainMenuMgr_CHECKPOINT, Checkpoint)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // am (PAResourceItoN.MainMenuMgr_PROJECT, Project)
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_PROJECT, "Open..."); // ap (PAResourceCommand.PACommandNames_OPEN_PROJECT, open_project_menu)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ah (PAResourceItoN.MainMenuMgr_FILE, File)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,243 MB. GUI used memory: 83 MB. Current time: 5/6/26, 11:09:54 PM MDT
+setFileChooser("/home/dfec/ece485/ece485_final_cadet_stage4/ece485_final_cadet_stage4.xpr");
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,111 MB. GUI used memory: 78 MB. Current time: 5/6/26, 11:09:57 PM MDT
+// Opening Vivado Project: /home/dfec/ece485/ece485_final_cadet_stage4/ece485_final_cadet_stage4.xpr. Version: Vivado v2025.2 
+selectButton("OptionPane.button", "Yes", "Open Project"); // JButton (OptionPane.button)
+// Tcl Message: close_project 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project /home/dfec/ece485/ece485_final_cadet_stage4/ece485_final_cadet_stage4.xpr 
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/dfec/ece485/ece485_final_cadet_stage4/ece485_final_cadet_stage4.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/2025.2/data/ip'. 
+// Project name: ece485_final_cadet_stage4; location: /home/dfec/ece485/ece485_final_cadet_stage4; part: xc7a200tsbg484-1
+dismissDialog("Open Project"); // bk (Open Project Progress)
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, riscv_pipeline(Behavioral) (riscv_pipeline.vhdl)]", 2, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, riscv_pipeline(Behavioral) (riscv_pipeline.vhdl)]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, riscv_pipeline(Behavioral) (riscv_pipeline.vhdl), pipe_reg : pipeline_registers(Behavioral) (pipeline_registers.vhdl)]", 4, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, riscv_pipeline(Behavioral) (riscv_pipeline.vhdl), pipe_reg : pipeline_registers(Behavioral) (pipeline_registers.vhdl)]", 4, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+selectCodeEditor("pipeline_registers.vhdl", 316, 197); // ae (pipeline_registers.vhdl)
+typeControlKey((HResource) null, "pipeline_registers.vhdl", 'v'); // ae (pipeline_registers.vhdl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
