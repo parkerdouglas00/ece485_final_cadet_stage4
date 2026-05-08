@@ -37,3 +37,43 @@ update_compile_order -fileset sources_1
 close_project
 open_project /home/dfec/ece485/ece485_final_cadet_stage4/ece485_final_cadet_stage4.xpr
 update_compile_order -fileset sources_1
+file mkdir /home/dfec/ece485/ece485_final_cadet_stage4/ece485_final_cadet_stage4.srcs/sources_1/new
+close [ open /home/dfec/ece485/ece485_final_cadet_stage4/ece485_final_cadet_stage4.srcs/sources_1/new/forwarding_unit_default.vhd w ]
+add_files /home/dfec/ece485/ece485_final_cadet_stage4/ece485_final_cadet_stage4.srcs/sources_1/new/forwarding_unit_default.vhd
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/dfec/ece485/ece485_final_cadet_stage4/ece485_final_cadet_stage4.srcs/sources_1/new/forwarding_unit_default.vhd] -no_script -reset -force -quiet
+remove_files  /home/dfec/ece485/ece485_final_cadet_stage4/ece485_final_cadet_stage4.srcs/sources_1/new/forwarding_unit_default.vhd
+close_project
+open_project /home/dfec/ece485/ece485_final_cadet_stage4/ece485_final_cadet_stage4.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config /home/dfec/ece485/ece485_final_cadet_stage2/tb_riscv_pipeline_behav.wcfg
+source tb_riscv_pipeline.tcl
+run 1000 ns
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+open_wave_config /home/dfec/ece485/ece485_final_cadet_stage2/tb_riscv_pipeline_behav.wcfg
+source tb_riscv_pipeline.tcl
+save_wave_config {/home/dfec/ece485/ece485_final_cadet_stage2/tb_riscv_pipeline_behav.wcfg}

@@ -210,7 +210,7 @@ begin
             mem_wb_load_addr  <= ex_mem_load_addr;
             mem_wb_alu_result <= ex_mem_alu_result;
             mem_wb_npc        <= ex_mem_npc;
-            mem_wb_rd         <= ex_mem_rd;            
+            mem_wb_rd         <= ex_mem_rd;
         end if;
     end process;
 end Behavioral;

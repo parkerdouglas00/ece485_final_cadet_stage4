@@ -214,8 +214,34 @@ architecture Behavioral of riscv_pipeline is
             mem_wb_mem_read : out STD_LOGIC;
             mem_wb_mem_write : out STD_LOGIC;
             mem_wb_load_addr : out STD_LOGIC;
-            mem_wb_alu_result  : out STD_LOGIC_VECTOR(31 downto 0)
+            mem_wb_alu_result  : out STD_LOGIC_VECTOR(31 downto 0);
             -- <add other mem_wb registers>
+            npc : in STD_LOGIC_VECTOR(31 downto 0);
+            rd  : in STD_LOGIC_VECTOR(4 downto 0);
+            
+            if_id_reg1_data  : in  STD_LOGIC_VECTOR(31 downto 0);
+            if_id_reg2_data  : in  STD_LOGIC_VECTOR(31 downto 0);
+            if_id_imm        : in  STD_LOGIC_VECTOR(31 downto 0);
+            if_id_alu_op     : in  STD_LOGIC_VECTOR(3 downto 0);
+            
+            if_id_npc : inout STD_LOGIC_VECTOR(31 downto 0);
+            if_id_rd  : inout STD_LOGIC_VECTOR(4 downto 0);
+            
+            id_ex_npc        : inout STD_LOGIC_VECTOR(31 downto 0);
+            id_ex_rd         : inout STD_LOGIC_VECTOR(4 downto 0);
+            id_ex_reg2_data  : inout STD_LOGIC_VECTOR(31 downto 0);
+            id_ex_imm        : inout STD_LOGIC_VECTOR(31 downto 0);
+            id_ex_alu_op     : inout STD_LOGIC_VECTOR(3 downto 0);
+            id_ex_alu_result : in STD_LOGIC_VECTOR(31 downto 0);
+            
+            ex_mem_npc        : inout STD_LOGIC_VECTOR(31 downto 0);
+            ex_mem_rd         : inout STD_LOGIC_VECTOR(4 downto 0);
+            ex_mem_reg2_data  : out STD_LOGIC_VECTOR(31 downto 0);
+            ex_mem_alu_result : inout STD_LOGIC_VECTOR(31 downto 0);
+            ex_mem_imm        : out STD_LOGIC_VECTOR(31 downto 0);
+            
+            mem_wb_npc : out STD_LOGIC_VECTOR(31 downto 0);
+            mem_wb_rd  : out STD_LOGIC_VECTOR(4 downto 0)
         );
     end component;
 
@@ -332,8 +358,34 @@ begin
             mem_wb_mem_read => mem_wb_mem_read,
             mem_wb_mem_write => mem_wb_mem_write,
             mem_wb_load_addr => mem_wb_load_addr,
-            mem_wb_alu_result  => mem_wb_alu_result
+            mem_wb_alu_result  => mem_wb_alu_result,
             -- <add other mem_wb registers>
+            npc => NPC,
+            rd => if_id_rd,
+            
+            if_id_reg1_data => if_id_reg1_data,
+            if_id_reg2_data => if_id_reg2_data,
+            if_id_imm => if_id_imm,
+            if_id_alu_op => if_id_alu_op,
+            
+            if_id_npc => if_id_npc,
+            if_id_rd => if_id_rd,
+            
+            id_ex_npc => id_ex_npc,
+            id_ex_rd => id_ex_rd,
+            id_ex_reg2_data => id_ex_reg2_data,
+            id_ex_imm => id_ex_imm,
+            id_ex_alu_op => id_ex_alu_op,
+            id_ex_alu_result => id_ex_alu_result,
+            
+            ex_mem_npc => ex_mem_npc,
+            ex_mem_rd => ex_mem_rd,
+            ex_mem_reg2_data => ex_mem_reg2_data,
+            ex_mem_alu_result => ex_mem_alu_result,
+            ex_mem_imm => ex_mem_imm,
+            
+            mem_wb_npc => mem_wb_npc,
+            mem_wb_rd => mem_wb_rd
         );
      
     -- Instruction memory
@@ -348,11 +400,11 @@ begin
     --if_id_npc    <= NPC;
 
     -- Decode instruction fields [not needed due to pipeline registers?]
-    --if_id_rs1 <= if_id_instr(<define bit> downto<define bit>);
-    --if_id_rs2 <= if_id_instr(<define bit> downto<define bit>);
-    --if_id_rd  <= if_id_instr(<define bit> downto<define bit>);
+    if_id_rs1 <= if_id_instr(19 downto 15);
+    if_id_rs2 <= if_id_instr(24 downto 20);
+    if_id_rd  <= if_id_instr(11 downto 7);
     
-    opcode <= if_id_instr(<define bit> downto<define bit>);
+    opcode <= if_id_instr(6 downto 0);
 
     -- Control unit
     control_unit_inst: control_unit
@@ -366,20 +418,20 @@ begin
             load_addr => load_addr,
             jump      => jump
         );
---    if_id_reg_write <= reg_write; [not needed due to pipeline registers?]
---    if_id_mem_read <= mem_read;
---    if_id_mem_write <= mem_write;
---    if_id_alu_src <= alu_src;
---    if_id_branch <= branch;
---    if_id_load_addr <= load_addr;
---    if_id_jump    <= jump;
+    if_id_reg_write <= reg_write; --[not needed due to pipeline registers?]
+    if_id_mem_read <= mem_read;
+    if_id_mem_write <= mem_write;
+    if_id_alu_src <= alu_src;
+    if_id_branch <= branch;
+    if_id_load_addr <= load_addr;
+    if_id_jump    <= jump;
 
     -- ALU control unit
     alu_control_inst: alu_control
             port map (
-                funct3 => (<what signals?> ),
-                funct7 => (<what signals?> ),
-                alu_op => < what signals? >
+                funct3 => if_id_instr(14 downto 12),
+                funct7 => if_id_instr(31 downto 25),
+                alu_op => if_id_alu_op
             );
       
     -- Instantiate hazard detection unit
@@ -408,9 +460,11 @@ begin
              elsif stall_counter > 0 then
                     stall_counter <= stall_counter - 1;
              elsif start_stall = '1' then
-                --stall_counter <= 3;
-                --stall_counter <= 2;  -- needed to support BNE [after previous stall]
-                --stall_counter <= 1;
+                if double_stall = '1' then
+                    stall_counter <= 2;
+                else
+                    stall_counter <= 1;
+                end if;
             end if;
         end if;
     end process;
@@ -457,13 +511,13 @@ begin
             );
            
     -- Comparator 
-    not_equal_flag <= '1' when <what do we compare to decide if we should branch?> else '0';
+    not_equal_flag <= '1' when if_id_reg1_data /= if_id_reg2_data else '0';
                                         
-    next_pc <=  pc when (<what stall control signals?>) else   -- stall case, single and double
-                <math based on NPC and imm> when (<what control signals?>) else -- branch case, single stall
-                <math based on NPC and imm> when (<what control signals?>) else -- branch case, double stall
-                <math based on NPC and imm> when (<what control signals?>) else  -- jump case
-                NPC when (<what control signals?>);    
+    next_pc <=  pc when (stall_counter > 0 or start_stall = '1') else   -- stall case, single and double
+                std_logic_vector(signed(if_id_npc) + signed(if_id_imm)) when if_id_branch = '1' and not_equal_flag = '1' and stall_counter = 1 else -- branch case, single stall
+                std_logic_vector(signed(if_id_npc) + signed(if_id_imm)) when if_id_branch = '1' and not_equal_flag = '1' and double_stall = '1' else -- branch case, double stall
+                std_logic_vector(signed(ex_mem_npc) + signed(ex_mem_imm)) when ex_mem_jump = '1' else  -- jump case
+                NPC;    
                 
     -- ID/EX pipeline registers
 
@@ -477,14 +531,14 @@ begin
     --       10 forward from memory output
     --       11 forward from custom LoadAddr
     
-    alu_input_a <= <which register?> when mux_select_A = "00" else
-                   <which register?> when mux_select_A = "01" else
-                   <which register?> when mux_select_A = "10" else
-                   x"10000000";            
+    alu_input_a <=  id_ex_reg1_data when mux_select_A = "00" else
+                    ex_mem_alu_result when mux_select_A = "01" else
+                    mem_wb_mem_data when mux_select_A = "10" else
+                    x"10000000";            
             
     -- mux to select alu input B (not used for forwarding for this program)
-    alu_input_b <= <which_register> when <which_control_signal> else
-                   <which_register>;
+    alu_input_b <=  id_ex_imm when id_ex_alu_src = '1' else
+                    id_ex_reg2_data;
     -- ALU
     alu_inst: alu
         port map (
@@ -519,8 +573,8 @@ begin
     -- WB Units
     
     -- MUX to write back to register file
-    wb_data <= mem_wb_mem_data when (<what control signals?>) else 
-               x"10000000" when (<what control signals?>) else  -- hack for custom load_addr instruction
-               mem_wb_alu_result when (<what control signals?>);      
+    wb_data <= mem_wb_mem_data when mem_wb_mem_read = '1' else 
+               x"10000000" when mem_wb_load_addr = '1' else  -- hack for custom load_addr instruction
+               mem_wb_alu_result;      
    
 end Behavioral;
